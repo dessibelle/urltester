@@ -1,0 +1,6 @@
+"https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/","200"
+"http://www.google.com","302"
+"http://awgaw.awgawg.awg.awgs.aa","HTTPConnectionPool(host='awgaw.awgawg.awg.awgs.aa', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x10fa36390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))"
+"http:/awgaw.awgawg.awg.awgs.aa","Invalid URL 'http:/awgaw.awgawg.awg.awgs.aa': No schema supplied. Perhaps you meant http://http:/awgaw.awgawg.awg.awgs.aa?"
+"aewgawg","Invalid URL 'aewgawg': No schema supplied. Perhaps you meant http://aewgawg?"
+
