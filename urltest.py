@@ -1,3 +1,5 @@
+"""Test URL accessibility."""
+
 import requests
 import argparse
 import csv
@@ -21,6 +23,14 @@ def test_url(url):
 
 
 def test_urls(urls):
+    """Test a list of URLs.
+
+    Args:
+        urls (iterable): A list of URLs to test.
+
+    Returns:
+        list: A list of tuples containing url and http status code, or Exception on failure.
+    """
     results = []
 
     for url in urls:
@@ -31,12 +41,31 @@ def test_urls(urls):
     return results
 
 
-def write_results_tab(results):
+def write_results_tab(results, f):
+    """Write results as tab separated data to the provided file-like object.
+
+    Args:
+        results (list): A list of url/status tuples
+        f (file): A file-like object to write to
+
+    Returns:
+        file: The file-like object provieded to the function
+    """
     for result in results:
-        print("{}\t{}".format(*result))
+        f.write("{}\t{}\n".format(*result))
+    return f
 
 
 def write_results_csv(results, f):
+    """Write results as CSV data to the provided file-like object.
+
+    Args:
+        results (list): A list of url/status tuples
+        f (file): A file-like object to write to
+
+    Returns:
+        file: The file-like object provieded to the function
+    """
     writer = csv.writer(ouptut_buffer, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     writer.writerows(results)
 
